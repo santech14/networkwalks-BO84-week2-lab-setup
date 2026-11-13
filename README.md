@@ -1,5 +1,5 @@
 
-# 🛡️ CYBERSECURITY LAB | WEEK 02
+# 🛡️ CYBERSECURITY LAB | WEEK 02 | BO84
 
 <div align="center">
 
