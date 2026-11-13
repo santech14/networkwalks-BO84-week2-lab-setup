@@ -1,277 +1,348 @@
-WEEK 2 – PROJECT MODULE 1
-FOOTPRINTING & RECONNAISSANCE ATTACKS WITH MULTIPLE KALI TOOLS
 
-Student Name: [Your Name]
-Course: Cybersecurity / Ethical Hacking
-Week: 2
-Project: Module 1 – Footprinting & Reconnaissance
-Target Domain: networkwalks.com
-Operating System: Kali Linux
-Date: [Submission Date]
+# 🛡️ CYBERSECURITY LAB | WEEK 02
 
-1. INTRODUCTION
+<div align="center">
 
-Footprinting and reconnaissance are the initial stages of cybersecurity testing and ethical hacking. The purpose is to collect publicly available information about a target domain and understand its internet-facing infrastructure.
+# FOOTPRINTING & RECONNAISSANCE
+### Multi-Tool Security Assessment with Kali Linux
 
-In this project, I used six Kali Linux tools to investigate the publicly available information associated with networkwalks.com.
+![Kali Linux](https://img.shields.io/badge/OS-Kali%20Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white)
+![Cybersecurity](https://img.shields.io/badge/Domain-Cybersecurity-0EA5E9?style=for-the-badge)
+![Project](https://img.shields.io/badge/Week-02-7C3AED?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-In%20Progress-orange?style=for-the-badge)
 
-The tools used were:
+**PROJECT MODULE 01**
 
-WHOIS
-WhatWeb
-NSLookup
-cURL
-WAFW00F
-DNSRecon
+*Footprinting • Information Gathering • DNS Analysis • Web Fingerprinting*
 
-The information collected helps identify domain registration details, website technologies, IP addresses, HTTP headers, Web Application Firewall (WAF) information, and DNS records.
+---
 
-Objective: To understand how reconnaissance tools work and how they help cybersecurity professionals identify publicly exposed information.
+**Student Name:** SANJO
 
-2. TASK 1 – WHOIS DOMAIN REGISTRATION LOOKUP
-Objective
+**Course:** Cybersecurity / Ethical Hacking
 
-To identify the domain registration information, including the registrar, domain creation date, expiration date, and name servers.
+**Target Domain:** `networkwalks.com`
 
-Tool Used
+**Platform:** Kali Linux
 
-WHOIS
+**Date:** November 2026
 
-Command Executed
-bash
+</div>
+
+---
+
+## 📌 01. PROJECT OVERVIEW
+
+Footprinting and reconnaissance are the initial stages of cybersecurity assessments and ethical hacking.
+
+The objective of this project is to collect publicly available information about a domain and understand its internet-facing infrastructure using Kali Linux tools.
+
+This practical project explores six reconnaissance tools to examine domain registration, website technologies, DNS information, HTTP headers, and Web Application Firewall detection.
+
+### 🎯 Project Objectives
+
+- Identify domain registration information.
+- Discover website technologies and server details.
+- Resolve domain names into IP addresses.
+- Analyze HTTP response headers.
+- Identify Web Application Firewall protection.
+- Enumerate publicly available DNS records.
+
+---
+
+## 🧰 02. TOOLS & TECHNOLOGIES
+
+| No. | Tool | Purpose |
+|:---:|---|---|
+| 01 | WHOIS | Domain registration lookup |
+| 02 | WhatWeb | Website technology fingerprinting |
+| 03 | NSLookup | DNS resolution |
+| 04 | cURL | HTTP response header analysis |
+| 05 | WAFW00F | WAF detection |
+| 06 | DNSRecon | DNS record enumeration |
+
+---
+
+# 🔍 03. PRACTICAL TASKS
+
+## TASK 01 — WHOIS DOMAIN LOOKUP
+
+<details>
+<summary><b>📖 Click to view task details</b></summary>
+
+### Objective
+
+Identify domain registration information, including registrar, creation date, expiration date, and name servers.
+
+### Tool
+
+`WHOIS`
+
+### Command
+
+```bash
 whois networkwalks.com
+```
 
-Procedure
-Open Kali Linux.
-Open the terminal.
-Enter the WHOIS command.
-Press Enter.
-Review the domain registration information.
-Save the output in a text file.
-Screenshot – Task 1
+### Procedure
 
-[INSERT YOUR TASK 1 WHOIS TERMINAL SCREENSHOT HERE]
+1. Open Kali Linux.
+2. Launch the terminal.
+3. Execute the WHOIS command.
+4. Review the registration details.
+5. Save the terminal output in a text file.
 
-Output / Findings
+### 📸 Screenshot Evidence
 
-Paste the actual command output or summarize the following information:
+**Insert your Task 1 terminal screenshot below:**
 
-Registrar:
-Domain Registration Date:
-Domain Expiration Date:
-Domain Name Servers:
-Domain Status:
-Registrant Information (if publicly available):
-Observation
+<img width="846" height="373" alt="image" src="https://github.com/user-attachments/assets/93d0e87d-e867-40fc-9772-17c2d648c207" />
 
-The WHOIS tool provides publicly available domain registration information. It helps identify the registrar, registration dates, and name servers associated with a domain.
 
-3. TASK 2 – WEBSITE TECHNOLOGY FINGERPRINTING
-Objective
 
-To identify the technologies used by the website, including its web server, Content Management System (CMS), plugins, frameworks, and other detectable technologies.
 
-Tool Used
+### Observation
 
-WhatWeb
+WHOIS provides publicly available domain registration information. It helps identify the registrar, registration dates, and name servers associated with a domain.
 
-Command Executed
-bash
+</details>
+
+---
+
+## TASK 02 — WEBSITE TECHNOLOGY FINGERPRINTING
+
+<details>
+<summary><b>📖 Click to view task details</b></summary>
+
+### Objective
+
+Identify the technologies used by the website, including its web server, CMS, plugins, frameworks, and other detectable components.
+
+### Tool
+
+`WhatWeb`
+
+### Command
+
+```bash
 whatweb networkwalks.com
+```
 
-Procedure
-Open the Kali Linux terminal.
-Enter the WhatWeb command.
-Press Enter.
-Examine the detected website technologies.
-Save the output in a text file.
-Screenshot – Task 2
+### Procedure
 
-[INSERT YOUR TASK 2 WHATWEB TERMINAL SCREENSHOT HERE]
+1. Open the Kali Linux terminal.
+2. Execute the WhatWeb command.
+3. Examine the detected technologies.
+4. Identify the website's technology stack.
+5. Save the terminal output.
 
-Output / Findings
+### 📸 Screenshot Evidence
 
-Record the actual results:
+<img width="1898" height="180" alt="image" src="https://github.com/user-attachments/assets/1ac537dd-753e-47de-b302-3f70418cb65b" />
 
-Website IP Address:
-Web Server:
-CMS:
-Detected Plugins:
-Programming Technologies:
-Other Information:
-Observation
 
-WhatWeb helps identify technologies used by a website. This information allows cybersecurity professionals to understand the website's technology stack and assess whether software components require security updates.
 
-4. TASK 3 – DNS LOOKUP
-Objective
+### Observation
 
-To resolve the domain name into its corresponding IP address using DNS lookup.
+WhatWeb identifies technologies used by websites. This information helps cybersecurity professionals understand the technology stack and assess whether software components require security updates.
 
-Tool Used
+</details>
 
-NSLookup
+---
 
-Command Executed
-bash
+## TASK 03 — DNS LOOKUP
+
+<details>
+<summary><b>📖 Click to view task details</b></summary>
+
+### Objective
+
+Resolve the domain name into its corresponding IP address using DNS lookup.
+
+### Tool
+
+`NSLookup`
+
+### Command
+
+```bash
 nslookup networkwalks.com
+```
 
-Procedure
-Open the Kali Linux terminal.
-Enter the NSLookup command.
-Press Enter.
-Observe the DNS server and resolved IP address.
-Save the output in a text file.
-Screenshot – Task 3
+### Procedure
 
-[INSERT YOUR TASK 3 NSLOOKUP TERMINAL SCREENSHOT HERE]
+1. Open the Kali Linux terminal.
+2. Execute the NSLookup command.
+3. Observe the DNS server.
+4. Identify the resolved IP address.
+5. Save the terminal output.
 
-Output / Findings
-DNS Server:
-Domain Name:
-Resolved IP Address:
-Additional IP Addresses (if available):
-Observation
+### 📸 Screenshot Evidence
 
-NSLookup is used to query DNS servers and find the IP address associated with a domain name. This helps understand how domain names are translated into network addresses.
+<img width="385" height="144" alt="image" src="https://github.com/user-attachments/assets/b84a6a33-d1dc-4ead-9f71-04907ed285da" />
 
-5. TASK 4 – HTTP RESPONSE HEADER ANALYSIS
-Objective
 
-To retrieve and examine the HTTP response headers returned by the website.
+### Observation
 
-Tool Used
+NSLookup queries DNS servers and identifies the IP address associated with a domain name. It helps explain how domain names are translated into network addresses.
 
-cURL
+</details>
 
-Command Executed
-bash
+---
+
+## TASK 04 — HTTP RESPONSE HEADER ANALYSIS
+
+<details>
+<summary><b>📖 Click to view task details</b></summary>
+
+### Objective
+
+Retrieve and examine HTTP response headers returned by the website.
+
+### Tool
+
+`cURL`
+
+### Command
+
+```bash
 curl -I https://networkwalks.com
+```
 
-Procedure
-Open the Kali Linux terminal.
-Enter the cURL command.
-Press Enter.
-Review the HTTP response status and headers.
-Save the output in a text file.
-Screenshot – Task 4
+### Procedure
 
-[INSERT YOUR TASK 4 CURL TERMINAL SCREENSHOT HERE]
+1. Open the Kali Linux terminal.
+2. Execute the cURL command.
+3. Examine the HTTP response.
+4. Identify relevant response headers.
+5. Save the terminal output.
 
-Output / Findings
+### 📸 Screenshot Evidence
 
-Record the actual results:
+<img width="1902" height="182" alt="image" src="https://github.com/user-attachments/assets/f3ed5ec5-fcd9-4faf-b741-ecde710bd8d2" />
 
-HTTP Status Code:
-Server:
-Content-Type:
-Date:
-Cache Information:
-Redirect Information:
-Other Security Headers:
-Observation
 
-The cURL command retrieves HTTP response headers without downloading the complete webpage. These headers provide information about the web server, response status, content type, caching, and other server configurations.
 
-6. TASK 5 – WEB APPLICATION FIREWALL DETECTION
-Objective
+### Observation
 
-To identify whether a Web Application Firewall (WAF) is detected on the target website.
+cURL retrieves HTTP response headers without downloading the complete webpage. These headers provide information about the server response, content type, caching, and server configuration.
 
-Tool Used
+</details>
 
-WAFW00F
+---
 
-Command Executed
-bash
+## TASK 05 — WEB APPLICATION FIREWALL DETECTION
+
+<details>
+<summary><b>📖 Click to view task details</b></summary>
+
+### Objective
+
+Identify whether a Web Application Firewall (WAF) is detected on the target website.
+
+### Tool
+
+`WAFW00F`
+
+### Command
+
+```bash
 wafw00f networkwalks.com
+```
 
-Procedure
-Open the Kali Linux terminal.
-Enter the WAFW00F command.
-Press Enter.
-Review the detection results.
-Save the output in a text file.
-Screenshot – Task 5
+### Procedure
 
-[INSERT YOUR TASK 5 WAFW00F TERMINAL SCREENSHOT HERE]
+1. Open the Kali Linux terminal.
+2. Execute the WAFW00F command.
+3. Review the detection results.
+4. Identify whether a WAF was detected.
+5. Save the terminal output.
 
-Output / Findings
-WAF Detected: Yes / No
-WAF Name:
-Additional Information:
-Observation
+### 📸 Screenshot Evidence
 
-WAFW00F helps identify whether a website is protected by a Web Application Firewall. A WAF monitors and filters incoming web traffic to help protect applications from malicious requests.
+<img width="677" height="337" alt="image" src="https://github.com/user-attachments/assets/eed0da25-57f4-4876-9dad-e061bddf1671" />
 
-7. TASK 6 – DNS RECORD ENUMERATION
-Objective
+### Observation
 
-To enumerate publicly available DNS records associated with the target domain.
+WAFW00F helps identify whether a website is protected by a Web Application Firewall. A WAF monitors and filters incoming web traffic to help protect web applications from malicious requests.
 
-Tool Used
+</details>
 
-DNSRecon
+---
 
-Command Executed
-bash
+## TASK 06 — DNS RECORD ENUMERATION
+
+<details>
+<summary><b>📖 Click to view task details</b></summary>
+
+### Objective
+
+Enumerate publicly available DNS records associated with the target domain.
+
+### Tool
+
+`DNSRecon`
+
+### Command
+
+```bash
 dnsrecon -d networkwalks.com
+```
 
-Procedure
-Open the Kali Linux terminal.
-Enter the DNSRecon command.
-Press Enter.
-Examine the DNS records returned by the tool.
-Save the output in a text file.
-Screenshot – Task 6
+### Procedure
 
-[INSERT YOUR TASK 6 DNSRECON TERMINAL SCREENSHOT HERE]
+1. Open the Kali Linux terminal.
+2. Execute the DNSRecon command.
+3. Examine the discovered DNS records.
+4. Identify relevant DNS information.
+5. Save the terminal output.
 
-Output / Findings
+### 📸 Screenshot Evidence
 
-Record the actual results:
+<img width="1089" height="434" alt="image" src="https://github.com/user-attachments/assets/002f7afb-b5d6-4509-ba44-8b97343ab2e3" />
 
-A Records:
-AAAA Records:
-NS Records:
-MX Records:
-TXT Records:
-SPF Records:
-SRV Records:
-Other DNS Information:
-Observation
+
+### Observation
 
 DNSRecon helps identify publicly available DNS records associated with a domain. These records provide information about domain resolution, mail servers, name servers, and other internet services.
 
-8. SUMMARY OF RESULTS
+</details>
 
-The following table summarizes the six reconnaissance tasks performed during this project.
+---
 
-Task	Tool	Purpose	Status
-1	WHOIS	Domain registration lookup	Completed / Pending
-2	WhatWeb	Website technology fingerprinting	Completed / Pending
-3	NSLookup	DNS and IP resolution	Completed / Pending
-4	cURL	HTTP header analysis	Completed / Pending
-5	WAFW00F	WAF detection	Completed / Pending
-6	DNSRecon	DNS record enumeration	Completed / Pending
-9. CONCLUSION
 
-In this project, I learned how to perform basic footprinting and reconnaissance using six different Kali Linux tools.
+### Key Learning Points
 
-I used WHOIS to examine domain registration details, WhatWeb to identify website technologies, and NSLookup to resolve domain names into IP addresses.
+- Understanding passive and active reconnaissance.
+- Learning how DNS infrastructure works.
+- Identifying publicly exposed website information.
+- Understanding HTTP response headers.
+- Recognizing the purpose of Web Application Firewalls.
+- Developing practical familiarity with Kali Linux tools.
 
-I also used cURL to examine HTTP response headers, WAFW00F to check for Web Application Firewall detection, and DNSRecon to enumerate publicly available DNS records.
+---
 
-This practical exercise improved my understanding of reconnaissance techniques and the importance of gathering information during the initial stages of cybersecurity assessments.
 
-These tools can also help website administrators and security professionals understand what information their websites expose publicly and identify opportunities to improve security.
 
-10. REFERENCES
-Kali Linux Official Documentation – https://www.kali.org/
-WHOIS – https://www.icann.org/
-WhatWeb – https://github.com/urbanadventurer/WhatWeb
-cURL – https://curl.se/
-WAFW00F – https://github.com/EnableSecurity/wafw00f
-DNSRecon – https://github.com/darkoperator/dnsrecon
+# ⚠️ 04. DISCLAIMER
 
-End of Report
+This project is intended for educational purposes and authorized cybersecurity assessments only.
+
+All reconnaissance activities should be conducted within an approved scope and with appropriate authorization.
+
+The findings recorded in this repository should reflect actual tool outputs and observations.
+
+---
+
+<div align="center">
+
+## 🛡️ END OF PROJECT
+
+**WEEK 02 | PROJECT MODULE 01**
+
+*Learn • Practice • Analyze • Secure*
+
+![Cybersecurity](https://img.shields.io/badge/Cybersecurity-Education-0EA5E9?style=flat-square)
+![Kali Linux](https://img.shields.io/badge/Powered%20By-Kali%20Linux-557C94?style=flat-square)
+
+</div>
