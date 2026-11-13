@@ -3,7 +3,7 @@
 
 <div align="center">
 
-# FOOTPRINTING & RECONNAISSANCE
+# W2-PM1: FOOTPRINTING & RECONNAISSANCE 
 ### Multi-Tool Security Assessment with Kali Linux
 
 ![Kali Linux](https://img.shields.io/badge/OS-Kali%20Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white)
@@ -321,6 +321,98 @@ DNSRecon helps identify publicly available DNS records associated with a domain.
 - Developing practical familiarity with Kali Linux tools.
 
 ---
+
+---
+
+# W2-PM5: Zenmap based Network Scanning
+
+
+
+### 🎯 Objective
+Perform network discovery using Zenmap and identify live hosts, IP addresses, and network topology.
+
+### 🛠️ Tools Used
+- Zenmap
+- Nmap
+- Windows CMD
+
+### Step 1 - Download and Install Zenmap
+
+Download Zenmap from the official website:
+
+https://nmap.org/download.html
+
+### Step 2 - Find Local IP Address and LAN Subnet
+
+Open CMD and execute:
+
+```cmd
+ipconfig
+```
+
+Identify your IPv4 address and subnet mask.
+
+**Screenshot:**
+
+![IP Configuration](Task2/screenshots/ipconfig.png)
+
+### Step 3 - Discover Live Hosts
+
+Open Zenmap, enter your LAN subnet, select Ping Scan, and click Scan.
+
+**Command example:**
+
+```bash
+nmap -sn <IP>
+```
+
+
+**Screenshot:**
+
+<img width="1241" height="532" alt="image" src="https://github.com/user-attachments/assets/ed737eea-56cd-4608-bd22-2dd11d78ba7f" />
+
+
+### Step 4 - Number of Live Hosts
+
+**Answer:** 4 hosts were discovered, including my PC.
+
+### Step 5 - IP Addresses of Live Hosts
+
+- 10.0.2.2
+- 10.0.2.3
+- 10.0.2.4
+- 10.0.2.15
+
+### Step 6 - MAC Addresses
+
+MAC addresses can be checked using:
+
+```cmd
+ipconfig /all
+```
+
+Actual MAC addresses are omitted from this public report for privacy.
+
+### Step 7 - Network Topology
+
+Open the Topology tab in Zenmap, enable the legend, and save the network topology as a PDF.
+
+**Topology Screenshot:**
+
+<img width="1241" height="619" alt="image" src="https://github.com/user-attachments/assets/ae62b80e-32d4-438d-892e-a7b682966db3" />
+
+
+### 📚 Key Learnings
+
+- Installed and used Zenmap.
+- Identified local IP and subnet.
+- Performed Ping Scan.
+- Discovered live network hosts.
+- Learned about IP and MAC addresses.
+- Exported network topology as PDF.
+
+
+</details>
 
 
 
